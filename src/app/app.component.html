@@ -1,20 +1,34 @@
 <nav class="navbar navbar-light bg-light">
-  <a href="#" class="navbar-brand mr-auto">Blockchain Poll</a>
-  <button type="button" class="btn btn-secondry">Create Poll</button>
+  <a href="#" class="navbar-brand branding brand mr-auto">Blockchain Poll</a>
+  <button
+    type="button"
+    class="btn createBtn btn-dark"
+    (click)="showForm = !showForm"
+  >
+    Create Poll
+  </button>
 </nav>
 
 <section class="jumpotron bg-light text-center">
   <h1>Decentralised Polls</h1>
   <p class="lead text-muted">
-    Powered by you, For you :) !
+    Powered by you, for you
   </p>
 </section>
 
+<app-poll-create *ngIf="showForm"></app-poll-create>
+
 <div class="d-flex">
   <div class="container poll-list">
-    list
+    <app-poll
+      *ngFor="let poll of polls"
+      [question]="poll.question"
+      [img]="poll.Image"
+      [voted]="poll.voted"
+      [votes]="poll.votes"
+    ></app-poll>
   </div>
   <div class="pool-details container">
-    Details
+    <app-poll-vote></app-poll-vote>
   </div>
 </div>

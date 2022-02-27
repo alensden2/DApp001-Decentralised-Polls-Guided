@@ -1,0 +1,84 @@
+<form
+  [formGroup]="pollForm"
+  action=""
+  (ngSubmit)="submitForm()"
+  class="container col-sm-4"
+>
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label col-form-label-sm">
+      Question:
+    </label>
+    <div class="col-sm-8">
+      <input
+        formControlName="questions"
+        type="text"
+        name=""
+        id=""
+        class="form-control form-control-sm"
+        placeholder="Enter Question"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label col-form-label-sm">
+      Image:
+    </label>
+    <div class="col-sm-8">
+      <input
+        formControlName="image"
+        type="text"
+        name=""
+        id=""
+        class="form-control form-control-sm"
+        placeholder="URL to image"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label col-form-label-sm">
+      Options:
+    </label>
+    <div class="col-sm-8">
+      <input
+        formControlName="op1"
+        type="text"
+        name=""
+        id=""
+        class="form-control form-control-sm"
+        placeholder="Option 1"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label col-form-label-sm"></label>
+    <div class="col-sm-8">
+      <input
+        formControlName="op2"
+        type="text"
+        name=""
+        id=""
+        class="form-control form-control-sm"
+        placeholder="Option 2"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label col-form-label-sm"></label>
+    <div class="col-sm-8">
+      <input
+        formControlName="op3"
+        type="text"
+        name=""
+        id=""
+        class="form-control form-control-sm"
+        placeholder="Option 3"
+      />
+    </div>
+    <div class="d-flex submitBtn justify-content-center">
+      <button type="submit" class="btn btn-sm btn-primary">Submit poll</button>
+    </div>
+  </div>
+</form>
